@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Interactive sales and revenue analysis dashboard." />
+  <title>Sales & Revenue Analysis Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#"><span class="brand-mark">S</span><span>Sales<span class="brand-muted">Pulse</span></span></a>
+      <div class="side-label">WORKSPACE</div>
+      <a class="nav-link active" href="#overview"><span>▦</span> Overview</a>
+      <a class="nav-link" href="#performance"><span>◷</span> Performance</a>
+      <a class="nav-link" href="#products"><span>▤</span> Products</a>
+      <div class="sidebar-bottom">
+        <div class="help-card">
+          <div class="help-icon">✦</div>
+          <strong>Need a hand?</strong>
+          <p>Import your own CSV data to explore your business performance.</p>
+          <label class="side-upload" for="csvInput">Import data</label>
+        </div>
+        <div class="profile"><div class="avatar">DA</div><div><strong>Dashboard Admin</strong><small>Workspace</small></div></div>
+      </div>
+    </aside>
+
+    <main class="main-content" id="overview">
+      <header class="topbar">
+        <div><div class="eyebrow">BUSINESS INTELLIGENCE / OVERVIEW</div><h1>Sales overview</h1><p class="subheading">Track revenue, understand trends, and find your best performers.</p></div>
+        <div class="top-actions"><span class="live-pill"><i></i> Demo data loaded</span><button class="button button-light" id="downloadCsv">↓ <span>Export CSV</span></button><label class="button button-primary" for="csvInput">↑ <span>Import CSV</span></label><input id="csvInput" type="file" accept=".csv,text/csv" hidden></div>
+      </header>
+
+      <section class="filter-bar" aria-label="Dashboard filters">
+        <div class="filter-title"><span class="filter-symbol">☷</span><strong>Filters</strong></div>
+        <label>From <input type="date" id="startDate"></label>
+        <label>To <input type="date" id="endDate"></label>
+        <label>Category <select id="categoryFilter"><option value="all">All categories</option></select></label>
+        <button class="reset-button" id="resetFilters">Reset filters</button>
+      </section>
+
+      <section class="kpi-grid" aria-label="Key performance indicators">
+        <article class="kpi-card"><div class="kpi-top"><span>Total revenue</span><span class="kpi-icon purple">₹</span></div><div class="kpi-value" id="totalRevenue">₹0</div><div class="kpi-foot"><span class="trend positive">↗ Revenue generated</span><span class="muted">Selected period</span></div></article>
+        <article class="kpi-card"><div class="kpi-top"><span>Total orders</span><span class="kpi-icon blue">▣</span></div><div class="kpi-value" id="totalOrders">0</div><div class="kpi-foot"><span class="trend positive">↗ Orders placed</span><span class="muted">Selected period</span></div></article>
+        <article class="kpi-card"><div class="kpi-top"><span>Units sold</span><span class="kpi-icon orange">◇</span></div><div class="kpi-value" id="unitsSold">0</div><div class="kpi-foot"><span class="trend positive">↗ Product volume</span><span class="muted">Selected period</span></div></article>
+        <article class="kpi-card"><div class="kpi-top"><span>Average order value</span><span class="kpi-icon green">⌁</span></div><div class="kpi-value" id="avgOrder">₹0</div><div class="kpi-foot"><span class="trend neutral">— Revenue / orders</span><span class="muted">Selected period</span></div></article>
+      </section>
+
+      <section class="charts-grid" id="performance">
+        <article class="panel revenue-panel">
+          <div class="panel-heading"><div><h2>Revenue over time</h2><p>Monthly revenue performance</p></div><span class="panel-tag">TREND</span></div>
+          <div class="chart-wrap"><canvas id="revenueChart" aria-label="Monthly revenue line chart"></canvas></div>
+        </article>
+        <article class="panel category-panel">
+          <div class="panel-heading"><div><h2>Sales by category</h2><p>Revenue contribution</p></div><span class="panel-tag">MIX</span></div>
+          <div class="chart-wrap doughnut-wrap"><canvas id="categoryChart" aria-label="Revenue by category doughnut chart"></canvas></div>
+          <div class="legend-list" id="categoryLegend"></div>
+        </article>
+      </section>
+
+      <section class="bottom-grid" id="products">
+        <article class="panel">
+          <div class="panel-heading"><div><h2>Top-performing products</h2><p>Ranked by total revenue</p></div><span class="panel-tag">TOP 5</span></div>
+          <div class="table-wrap"><table><thead><tr><th>PRODUCT</th><th>UNITS SOLD</th><th>REVENUE</th><th>SHARE</th></tr></thead><tbody id="productsTable"></tbody></table></div>
+        </article>
+        <article class="panel insight-panel">
+          <div class="panel-heading"><div><h2>Quick insights</h2><p>Highlights from your data</p></div><span class="panel-tag">INSIGHTS</span></div>
+          <div id="insights" class="insights-list"></div>
+        </article>
+      </section>
+      <footer>SalesPulse Dashboard <span>•</span> Built for sales and revenue analysis <span class="footer-right">Demo dataset · Replace with your CSV</span></footer>
+    </main>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

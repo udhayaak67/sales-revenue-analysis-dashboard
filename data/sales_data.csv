@@ -1,0 +1,34 @@
+date,product,category,segment,units,price,orderId
+2026-01-04,Wireless Mouse,Electronics,Accessories,24,799,ORD-0001
+2026-01-09,Office Chair,Furniture,Furniture,8,5499,ORD-0002
+2026-01-15,Notebook Set,Stationery,Office,42,249,ORD-0003
+2026-02-03,Bluetooth Speaker,Electronics,Audio,15,1899,ORD-0004
+2026-02-11,Desk Lamp,Home & Living,Lighting,18,1299,ORD-0005
+2026-02-21,Wireless Mouse,Electronics,Accessories,31,799,ORD-0006
+2026-03-02,Office Chair,Furniture,Furniture,11,5499,ORD-0007
+2026-03-13,Water Bottle,Home & Living,Kitchen,37,499,ORD-0008
+2026-03-25,Notebook Set,Stationery,Office,55,249,ORD-0009
+2026-04-05,Bluetooth Speaker,Electronics,Audio,22,1899,ORD-0010
+2026-04-14,Desk Lamp,Home & Living,Lighting,25,1299,ORD-0011
+2026-04-27,Wireless Mouse,Electronics,Accessories,29,799,ORD-0012
+2026-05-06,Office Chair,Furniture,Furniture,13,5499,ORD-0013
+2026-05-18,Water Bottle,Home & Living,Kitchen,48,499,ORD-0014
+2026-05-26,Notebook Set,Stationery,Office,61,249,ORD-0015
+2026-06-03,Bluetooth Speaker,Electronics,Audio,27,1899,ORD-0016
+2026-06-12,Desk Lamp,Home & Living,Lighting,32,1299,ORD-0017
+2026-06-24,Wireless Mouse,Electronics,Accessories,36,799,ORD-0018
+2026-07-08,Office Chair,Furniture,Furniture,15,5499,ORD-0019
+2026-07-17,Water Bottle,Home & Living,Kitchen,53,499,ORD-0020
+2026-07-28,Notebook Set,Stationery,Office,72,249,ORD-0021
+2026-08-04,Bluetooth Speaker,Electronics,Audio,34,1899,ORD-0022
+2026-08-16,Desk Lamp,Home & Living,Lighting,39,1299,ORD-0023
+2026-08-25,Wireless Mouse,Electronics,Accessories,41,799,ORD-0024
+2026-09-02,Office Chair,Furniture,Furniture,17,5499,ORD-0025
+2026-09-12,Water Bottle,Home & Living,Kitchen,59,499,ORD-0026
+2026-09-23,Notebook Set,Stationery,Office,80,249,ORD-0027
+2026-10-06,Bluetooth Speaker,Electronics,Audio,38,1899,ORD-0028
+2026-10-15,Desk Lamp,Home & Living,Lighting,44,1299,ORD-0029
+2026-10-27,Wireless Mouse,Electronics,Accessories,47,799,ORD-0030
+2026-11-03,Office Chair,Furniture,Furniture,19,5499,ORD-0031
+2026-11-12,Water Bottle,Home & Living,Kitchen,64,499,ORD-0032
+2026-11-19,Notebook Set,Stationery,Office,88,249,ORD-0033
